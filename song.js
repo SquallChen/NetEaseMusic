@@ -18,7 +18,7 @@ $(function(){
         })
     })
     let audio = document.createElement('audio')
-    audio.src = 'http://dl.stream.qqmusic.qq.com/C4000035GveV3i9dBM.m4a?vkey=DFE330675943095FB54FFA6F0E6B3BBA2718E07E2DFA4F035C43E2CD18318418CEAE14AB71354AA0326E4FC8B1BB47377EAFA2FB37B73486&guid=1895781468&uin=0&fromtag=66'
+    audio.src = 'http://os21qkrm8.bkt.clouddn.com/%E5%B0%8F%E8%8B%B9%E6%9E%9C.mp3'
     audio.oncanplay=function(){
         audio.play()
         $('.disc-container').addClass('playing')
