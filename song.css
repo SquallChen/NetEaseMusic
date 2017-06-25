@@ -12,7 +12,7 @@
     }
 }
 .page{display: flex; flex-direction: column; height: 100vh;
-	background: transparent url(http://p4.music.126.net/ktu4Se-hbB0natFRs1IwRg==/16647705556224922.jpg) no-repeat center;
+	/*background: transparent url(http://p4.music.126.net/ktu4Se-hbB0natFRs1IwRg==/16647705556224922.jpg) no-repeat center;*/
 	background-size: cover;
 }
 
@@ -27,7 +27,7 @@
 .disc-container .disc{display: flex; justify-content: center; align-items: center; margin-top: 18vw; }
 .disc-container .ring{width: 78vw; }
 .disc-container .light{width: 78vw; position: absolute; }
-.disc-container .cover{width: 44.5vw; position: absolute; border-radius: 50%;  }
+.disc-container .cover{width: 49vw; position: absolute; border-radius: 50%;  }
 .disc-container.playing .light,
 .disc-container.playing .cover{animation: circle 20s infinite linear; }
 .disc-container .icon-pause{display: none; }

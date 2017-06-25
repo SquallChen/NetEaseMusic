@@ -6,8 +6,14 @@
 *::before,*::after{
     box-sizing: border-box;
 }
+
 body{
     font-size: 3.7vw;
+}
+a{
+    text-decoration: none;
+    color:#000;
+
 }
 /*.active{
     color:#D33A31;
@@ -165,7 +171,24 @@ body{
 
 }
 
-/***********************      art      *******************************/
+#lastMusicloading{
+    text-align: center;
+}
+#lastMusic .album{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    padding-right:12vw;
+}
+#lastMusic .main{
+    display: flex;
+}
+#lastMusic .sq{
+    margin-top:1vw;
+}
+    /***********************      art      *******************************/
 section.art{
     background: url(./img/bg.png)no-repeat center 30%;
     background-size:100% 100%;
@@ -201,3 +224,5 @@ section.art .copyright{
     text-align: center;
     color:#999;
 }
+
+

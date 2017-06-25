@@ -1,0 +1,83 @@
+[
+  {
+    "id":1,
+    "url":"http://os21qkrm8.bkt.clouddn.com/%E4%B8%80%E7%AC%91%E5%80%BE%E5%9F%8E.mp3",
+    "name":"一笑倾城",
+    "album":"汪苏泷 / 明柏辰&明筱岩 / 陈墨一 / 杨梓鑫 - 我想和你唱 第二季 第9期",
+    "cover":"./img/1-1.jpg",
+    "bgimg":"./img/1-2.jpg"
+  },
+  {
+    "id":2,
+    "url":"http://os21qkrm8.bkt.clouddn.com/Fake%E5%BA%9F.mp3",
+    "name":"Fake废",
+    "album":"黄礼格 - Fake废",
+    "cover":"./img/2-1.jpg",
+    "bgimg":"./img/2-2.jpg"
+  },
+  {
+    "id":3,
+    "url":"http://os21qkrm8.bkt.clouddn.com/%E4%B8%8D%E4%B8%BA%E8%B0%81%E8%80%8C%E4%BD%9C%E7%9A%84%E6%AD%8C.mp3",
+    "name":"不为谁而作的歌",
+    "album":"林俊杰 - 天生是优我 第十二期",
+    "cover":"./img/3-1.jpg",
+    "bgimg":"./img/3-2.jpg"
+  },
+  {
+    "id":4,
+    "url":"http://os21qkrm8.bkt.clouddn.com/%E7%88%B6%E4%BA%B2%E5%86%99%E7%9A%84%E6%95%A3%E8%AF%97.mp3",
+    "name":"父亲写的散诗",
+    "album":"姚晨 - 2017跨界歌王 第十一期",
+    "cover":"./img/4-1.jpg",
+    "bgimg":"./img/4-2.jpg"
+  },
+  {
+    "id":5,
+    "url":"http://os21qkrm8.bkt.clouddn.com/%E6%B3%A1%E6%B2%AB.mp3",
+    "name":"泡沫",
+    "album":"G.E.M.邓紫棋 / 余赛亚 / 戴斯琪 / 肖茗 - 我想和你唱 第二季 第9期",
+    "cover":"./img/5-1.jpg",
+    "bgimg":"./img/5-2.jpg"
+
+  },
+  {
+    "id":6,
+    "url":"http://os21qkrm8.bkt.clouddn.com/%EB%8F%8C%EB%A0%A4%EB%86%94%20%28FLY%20WITH%20THE%20WIND%29.mp3",
+    "name":"돌려놔 (FLY WITH THE WIND)",
+    "album":"Lina / Navi - 품위있는 그녀 OST PART.2",
+    "cover":"./img/6-1.jpg",
+    "bgimg":"./img/6-2.jpg"
+  },
+  {
+    "id":7,
+    "url":"http://os21qkrm8.bkt.clouddn.com/%E5%A4%B1%E7%BA%A6.mp3",
+    "name":"失约",
+    "album":"Twins - 失约",
+    "cover":"./img/7-1.jpg",
+    "bgimg":"./img/7-2.jpg"
+  },
+  {
+    "id":8,
+    "url":"http://os21qkrm8.bkt.clouddn.com/%E6%9C%80%E7%BE%8E.mp3",
+    "name":"最美",
+    "album":"陈赫 - 2017跨界歌王 第十一期",
+    "cover":"./img/8-1.jpg",
+    "bgimg":"./img/8-2.jpg"
+  },
+  {
+    "id":9,
+    "url":"http://os21qkrm8.bkt.clouddn.com/%E6%88%90%E9%83%BD.mp3",
+    "name":"成都",
+    "album":"张继科 - 2017跨界歌王 第十一期",
+    "cover":"./img/9-1.jpg",
+    "bgimg":"./img/9-2.jpg"
+  },
+  {
+    "id":10,
+    "url":"http://os21qkrm8.bkt.clouddn.com/%E6%96%B0%E8%B4%B5%E5%A6%83%E9%86%89%E9%85%92.mp3",
+    "name":"新贵妃醉酒",
+    "album":"李玉刚 / 徐天意 / 杨姣 / 祝颂皓 - 我想和你唱 第二季 第9期",
+    "cover":"./img/10-1.jpg",
+    "bgimg":"./img/10-2.jpg"
+  }
+]
