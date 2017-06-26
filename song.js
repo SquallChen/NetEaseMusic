@@ -5,7 +5,18 @@ $(function() {
     $.get('./songs.json').then(function (response) {
         let songs = response
         let song = songs.filter(s => s.id === id)[0]
-        let {url} = song
+        let {url,name,lyric} = song
+        initPlayer.call(undefined,url)
+        initText(name,lyric)
+        $('.page').css({"background-image":`url(./img/${id}-2.jpg)`})
+        $('.disc-container .cover')[0].src=`./img/${id}-1.jpg`
+    })
+
+    function initText(name,lyric){
+        $('.song-description > h1').text(name)
+        parseLyric(lyric)
+    }
+    function initPlayer (url){
         let audio = document.createElement('audio')
         audio.src = url
         audio.oncanplay = function () {
@@ -20,13 +31,37 @@ $(function() {
             audio.play()
             $('.disc-container').addClass('playing')
         })
-        $('.page').css({"background-image":`url(./img/${id}-2.jpg)`})
-        $('.disc-container .cover')[0].src=`./img/${id}-1.jpg`
-    })
 
+        setInterval(()=>{
+            let seconds = audio.currentTime
+            let munites = ~~(seconds / 60)
+            let left = seconds - munites * 60
+            let time = `${pad(munites)}:${pad(left)}`
+            let $lines = $('.lines > p')
+            let $whichline
+            for(let i=0;i<$lines.length;i++){
+                let currentLineTime = $lines.eq(i).attr('data-time')
+                let nextLineTime = $lines.eq(i+1).attr('data-time')
+                if($lines.eq(i+1).length !== 0 && currentLineTime < time && nextLineTime > time){
+                    $whichline = $lines.eq(i)
+                    break
+                }
+            }
+            if($whichline){
+                $whichline.addClass('active').prev().removeClass('active')
+                let top = $whichline.offset().top
+                let linesTop = $('.lines').offset().top
+                let delta = top - linesTop -$('.lyric').height()/3
+                $('.lines').css('transform',`translateY(-${delta}px)`)
+            }
+        },100)
+    }
 
-    $.get('./lyric.json').then(function (object) {
-        let {lyric} = object
+    function pad(number){
+        return number >=10 ? number + '':'0' + number
+    }
+
+    function parseLyric(lyric){
         let array = lyric.split('\n')
         let regex = /^\[(.+)\](.*)$/
         array = array.map(function (string, index) {
@@ -44,6 +79,7 @@ $(function() {
             $p.attr('data-time', object.time).text(object.words)
             $p.appendTo($lyric.children('.lines'))
         })
-    })
+    }
+
 })
 
