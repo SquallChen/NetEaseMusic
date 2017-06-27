@@ -26,7 +26,7 @@ $(function() {
         $('.icon-pause').on('click', function () {
             audio.pause()
             $('.disc-container').removeClass('playing')
-            $('.pointer').css('transform-origin','center top ')
+           /* $('.pointer').css('transform-origin','left 0 ')*/
             $('.pointer').css('transition','.5s ease-in-out ')
             $('.pointer').css('transform','rotateZ(-14deg)')
         })
