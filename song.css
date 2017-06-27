@@ -23,7 +23,7 @@
 	border-radius: 50%; background: rgba(0,0,0,0.5);
 }
 .disc-container .icon {width: 10vw; fill: white;}
-.disc-container .pointer{width: 24vw; position: absolute; left: 45vw; }
+.disc-container .pointer{width: 24vw; position: absolute; left: 45vw;top:-0.6vw; }
 .disc-container .disc{display: flex; justify-content: center; align-items: center; margin-top: 18vw; }
 .disc-container .ring{width: 78vw; }
 .disc-container .light{width: 78vw; position: absolute; }

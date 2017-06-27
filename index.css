@@ -15,12 +15,9 @@ a{
     color:#000;
 
 }
-/*.active{
-    color:#D33A31;
-    border-bottom:2px solid #D33A31;
-}*/
 
-.indexcontain .fix{ /**/
+
+.indexcontain .fix{
     position: fixed;
     width:100%;
     top:0;
@@ -55,20 +52,15 @@ a{
 }
 /*************************     nav    *********************************/
 
+.tabcontent > li{  display: none;}
+.tabcontent > li.active{ display: block;}
  .indexnav ol{
     display: flex;
-   /* justify-content: space-between;
-    padding:2.58vw 0;
-    list-style: none;
-    font-size: 4vw;
-    border-bottom:1px solid #E6E6E6;
-    padding-left:8.6vw;*/
     text-align: center;
-/*    line-height: 12vw;*/
     border-bottom:1px solid #E6E6E6;
     font-size: 1.1em;
     list-style: none;
-     background: #fff;
+     background:#fff;
 }
  .indexnav ol li{
     flex-grow: 1;
@@ -90,6 +82,7 @@ a{
     left:-2vw;
     right:-2vw;
 }
+
 /*******************    recommend    ********************************/
  section > h2:first-child{
     font-size: 1.2em;
@@ -236,4 +229,5 @@ section.art .copyright{
     color:#999;
 }
 
-
+#ab2loading{
+margin-top:30vw;}
