@@ -18,6 +18,7 @@ $(function() {
                     </li>
                            `)
             $('#lastMusic').append($li)
+
         })
         $('#lastMusicloading').remove()   //当所有歌曲元素加载完毕，去除loading gif
     }, function () {
@@ -69,10 +70,29 @@ $(function() {
         timer = setTimeout(function(){
             search(value).then((result)=>{
                 timer = undefined
-                if(result.length !== 0){
-                    $('#output').text(result.map((r)=>r.name).join(','))
-                }else {
-                    $('#output').text('非常抱歉，没有找到这首歌')
+                if(result.length !== 0 ){
+                    for(var i=0;i<result.length;i++){
+                        let $li = $(`
+                        <li>
+                         <a href="./song.html?id=${result[i].id}">
+                        <h3>${result[i].name}</h3>
+                       <div class="main">
+                        <svg class="sq">
+                            <use xlink:href="#icon-sq"></use>
+                            </svg><p class="album">${result[i].album}</p>
+                            <svg class="playsvg">
+                            <use xlink:href="#icon-play-circled"></use>
+                            </svg>
+                         </div>
+                            </a>
+                            </li>
+                                   `)
+
+                                $('#output').append($li)
+                         }
+                }else{
+                    let $p = '<p id="sorry">非常抱歉，没有找到这首歌</p>'
+                    $('#output').append($p)
                 }
             })
         },500)
@@ -81,20 +101,22 @@ $(function() {
     function search(keyword){                                 //搜索函数传入关键字，模拟在服务器上搜索数据库
         return new Promise((resolve,reject)=>{
             var database = [                                   //创建数组存放以供搜索的数据
-                { "id":1, "name":"一笑倾城",},
-                { "id":2, "name":"Fake废",},
-                { "id":3, "name":"不为谁而作的歌",},
-                { "id":4, "name":"父亲写的散诗",},
-                { "id":5, "name":"泡沫",},
-                { "id":6, "name":"돌려놔 (FLY WITH THE WIND)",},
-                { "id":7, "name":"失约",},
-                { "id":8, "name":"最美",},
-                { "id":9, "name":"成都",},
-                { "id":10, "name":"新贵妃醉酒",}
+                { "id":1, "name":"一笑倾城","album":"汪苏泷 / 明柏辰&明筱岩 / 陈墨一 / 杨梓鑫 - 我想和你唱 第二季 第9期"},
+                { "id":2, "name":"Fake废","album":"黄礼格 - Fake废"},
+                { "id":3, "name":"不为谁而作的歌","album":"林俊杰 - 天生是优我 第十二期"},
+                { "id":4, "name":"父亲写的散诗","album":"姚晨 - 2017跨界歌王 第十一期"},
+                { "id":5, "name":"泡沫", "album":"G.E.M.邓紫棋 / 余赛亚 / 戴斯琪 / 肖茗 - 我想和你唱 第二季 第9期"},
+                { "id":6, "name":"돌려놔 (FLY WITH THE WIND)","album":"Lina / Navi - 품위있는 그녀 OST PART.2"},
+                { "id":7, "name":"失约","album":"Twins - 失约"},
+                { "id":8, "name":"最美","album":"陈赫 - 2017跨界歌王 第十一期"},
+                { "id":9, "name":"成都","album":"张继科 - 2017跨界歌王 第十一期"},
+                { "id":10, "name":"新贵妃醉酒","album":"李玉刚 / 徐天意 / 杨姣 / 祝颂皓 - 我想和你唱 第二季 第9期"}
             ]
 
             let result = database.filter(function(item){        //筛选函数，当已有数据与输入的关键字中任意一字体匹配，返回这个item.name
                 return item.name.indexOf(keyword)>=0
+
+
 
             })
             setTimeout(function(){

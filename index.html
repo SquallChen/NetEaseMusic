@@ -76,12 +76,14 @@
             </li>
             <li>
                 <div class="underline">
-                <input type="text" id="searchSong" placeholder="搜索歌曲、歌手、专辑">
+                <input type="text" id="searchSong" placeholder="搜索歌曲、歌手、专辑" autocomplete="off">
                     <svg class="searchIcon">
                         <use xlink:href="#icon-search"></use>
                     </svg>
                 </div>
-                <div id="output"></div>
+                <div class="searchSong">
+                    <ol id="output"></ol>
+                </div>
 
             </li>
         </ol>
