@@ -1,0 +1,303 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 3.7vw;
+    background: #F8F8F8;
+}
+a{
+    text-decoration: none;
+    color:#000;
+
+}
+ol{
+    list-style: none;
+}
+
+
+.song-list-banner{
+    display: flex;
+    width:100vw;
+    height:49.6vw;
+    background:url(./img/song_list_bg.jpg) no-repeat 50% 30%;
+
+}
+.song-list-banner .song-list-cover{
+    position: relative;
+    width:33.6vw;
+    height:33.6vw;
+    background:url(./img/song_list.jpg);
+    margin-left:4vw;
+    margin-top:8vw;
+    background-size:cover;
+
+}
+.song-list-banner .song-list-cover .play-amount{
+    color:white;
+    font-size: 0.9em;
+    position: absolute;
+    top:0;
+    right:0;
+    background:url(./img/share_lay_songList1.png) no-repeat;
+    width:100%;
+    height:4.8vw;
+}
+.song-list-banner .song-list-cover .play-amount .play-amount-num{
+    float: right;
+    margin-right:-2vw;
+    vertical-align: bottom;
+}
+.song-list-banner .song-list-cover .play-amount .headset{
+    width:10.2%;
+    margin-top:3px;
+    position: absolute;
+    top:0.2vw;
+    left:17.6vw;
+}
+.song-list-banner .song-list-cover .play-amount .songList{
+    width:28%;
+    position: absolute;
+    top:2vw;
+    left:-0.3vw;
+}
+.song-list-banner .song-list-cover .play-amount p{
+    position: absolute;
+    font-size: 0.7em;
+    top:3vw;
+    left:2vw;
+}
+.song-list-banner .song-list-cover .play-amount span{
+    position: absolute;
+    top:0;
+    right:0.4vw;
+}
+.song-list-banner .song-list-cover .gradient{
+    width:75%;
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+
+
+.song-list-banner .song-list-details{
+    width:54vw;
+    color:white;
+    margin-top:7.6vw;
+    margin-left:5vw;
+}
+.song-list-banner .song-list-details p{
+    font-size: 1.2em;
+}
+.song-list-banner .song-list-details .school{
+    color:#f2f2f2;
+    position: absolute;
+    font-size: 1em;
+    top:26.4vw;
+    left:52vw;
+}
+.song-list-banner .song-list-details .vip{
+    position: absolute;
+    top:30vw;
+    left:48.8vw;
+    width:3.6vw;
+}
+.song-list-banner .song-list-details .disc{
+    width:8vw;
+    border-radius: 50%;
+    position: absolute;
+    top:25.2vw;
+}
+
+
+/**********************      introduction       ************************/
+.active{
+    display: none;
+}
+.introduction{
+    margin-top:2.4vw;
+    margin-left:4vw;
+    margin-right:2vw;
+    color:#666666;
+}
+.introduction p span{
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    border:1px solid #DFDFDF;
+    display: inline-block;
+    height:4.8vw;
+    width:11vw;
+    border-radius: 15px;
+    margin-right:3vw;
+    margin-left:1vw;
+}
+.introduction .content-short,.content-long{
+    margin-top:2.6vw;
+}
+
+.introduction .dropdown{
+    background:url(./img/share_icn_dropdown.png) no-repeat;
+    background-size: 3.4vw;
+    width:7vw;
+    height:4vw;
+    float: right;
+    margin-right:-2vw;
+    margin-top:1vw;
+}
+
+.introduction .dropup{
+    background:url(./img/share_icn_dropup.png) no-repeat;
+    background-size: 3.4vw;
+    width:7vw;
+    height:4vw;
+    float: right;
+    margin-right:-2vw;
+    margin-top:1vw;
+}
+
+.song-list-title{
+    background: #EBEBEB;
+    width:100%;
+    height:6.2vw;
+    margin-top:5vw;
+    font-size: 0.9em;
+    color:#666;
+    line-height: 1.8em;
+    padding-left:2.6vw;
+}
+
+#songListLoading{
+    text-align: center;
+}
+
+
+
+.songListContent>ol>li{
+    /*border-bottom:1px solid #e2e2e3;*/
+    padding:1vw 0;
+    position: relative;
+
+}
+.songListContent>ol>li h3{
+    margin-top:0.6vw;
+    margin-left:10vw;
+    font-size: 4.53vw;
+    font-weight: normal;
+}
+
+.songListContent>ol > li .ranking{
+    position: absolute;
+    left:2vw;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 1.16em;
+}
+
+.songListContent>ol > li p{
+    font-size: 3.2vw;
+    color:#888;
+    margin:0.8vw 0;
+    display: flex;
+    align-items: center;
+
+}
+.songListContent > ol > li .sq{
+    width:4.2vw;
+    height:4.2vw;
+    margin-right: 0.5em;
+    fill:#fe672e;
+    margin-left:10vw;
+}
+.songListContent > ol > li .playsvg{
+    width:6.4vw;
+    height:6.4vw;
+    position: absolute;
+    right:2.4vw;
+    top:50%;
+    transform: translateY(-50%);
+    fill:#AAAAAA;
+
+}
+.songListContent .list{
+    font-size: 1em;
+    color:#999;
+    text-align: center;
+    margin:5vw 0;
+    margin-bottom:18vw;
+}
+.songListContent .list a:link{
+    color:#999;
+}
+.songListContent .list a:visited{
+    color:#999;
+}
+.songListContent .list span{
+    opacity: 0.4;
+}
+
+#songListMusic .album{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    padding-right:12vw;
+}
+#songListMusic .main{
+    display: flex;
+}
+#songListMusic .sq {
+    margin-top: 1vw;
+}
+#songListMusic .underline{
+    position: absolute;
+    width:90vw;
+    height:0;
+    top:15vw;
+    left:10vw;
+    border-bottom:1px solid #f2f2f2;
+}
+.collection{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    height:14vw;
+    border-top: 1px solid #E6E6E6;
+    padding-top:1.8vw;
+    /*position: relative;*/
+    background:#fff;
+    bottom:0;
+    width:100vw;
+}
+
+.collection a{
+    display: inline-block;
+    width:84vw;
+    height:10.8vw;
+    border-radius: 6vw;
+    background: #D33A31;
+    margin-bottom:1.8vw;
+    text-align: center;
+}
+.collection .icon{
+    width:6.2vw;
+    height:6.7vw;
+    position: absolute;
+    top:3.7vw;
+    left:37.6vw;
+
+}
+.collection span{
+    color:white;
+    font-size: 1.16em;
+    position: absolute;
+    top:4vw;
+    left:45vw;
+}

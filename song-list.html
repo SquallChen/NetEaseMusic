@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>song-list</title>
+    <link rel="stylesheet" href="./song-list.css">
+</head>
+<body>
+    <div class="song-list">
+        <div class="song-list-banner">
+            <div class="song-list-cover">
+                <div class="play-amount">
+                        <img src="./img/share_icn_headset.png" alt="" class="headset">
+                        <span>206.7万</span>
+                        <img src="./img/share_lay_songList2.png" alt="" class="songList">
+                        <p>歌单</p>
+                </div>
+                <!--<img src="./img/share_lay_songList1.png" alt="" class="gradient">-->
+            </div>
+            <div class="song-list-details">
+                <p>歌曲播放页面双指下滑，开启毕业放映厅</p>
+                    <img src="./img/disc.jpg" alt="" class="disc">
+                    <p class="school">网易云音乐校园</p>
+                <img src="./img/authicn.png" alt="" class="vip">
+            </div>
+            </div>
+        <div class="introduction">
+            <p>标签：<span>感动</span><span>思念</span><span>热播</span></p>
+            <p class="content-short">简介：欢迎来到网易云音乐•毕业放映厅。
+                在每首歌的歌曲播放页面，双指下滑（食指和中指为佳），即可进入毕业放映厅。...
+            </p>
+            <p class="content-long active">简介：欢迎来到网易云音乐•毕业放映厅。
+                在每首歌的歌曲播放页面，双指下滑（食指和中指为佳），即可进入毕业放映厅。
+                让我们一起用五分钟的时间，重回少年时。
+            </p>
+            <div class="drop">
+                <div class="dropdown"></div>
+                <div class="dropup active"></div>
+            </div>
+        </div>
+        <div class="song-list-title">
+            歌曲列表
+        </div>
+        <section class="songListContent">
+            <p id="songListLoading"> <img src="./img/loading.gif" alt=""></p>
+            <ol id="songListMusic"></ol>
+            <p class="list"><a href="#">更多精彩榜单 <span>></span></a></p>
+        </section>
+        <div class="collection">
+            <a href="#">
+                <img src="./img/icon.png" alt="" class="icon">
+                <span>收藏歌单</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//at.alicdn.com/t/font_hlt2w917m65ka9k9.js"></script>
+    <script src="./song-list.js"></script>
+</body>
+</html>
