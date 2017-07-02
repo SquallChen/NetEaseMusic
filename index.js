@@ -18,9 +18,8 @@ $(function() {
                     </li>
                            `)
             $('#lastMusic').append($li)
-
         })
-        $('#lastMusicloading').remove()   //当所有歌曲元素加载完毕，去除loading gif
+        $('#lastMusicloading').remove()//当所有歌曲元素加载完毕，去除loading gif
     }, function () {
         //如果获取失败，就.....
     })
@@ -39,9 +38,37 @@ $(function() {
             return
         }
         if(index === 1){
-            $.get('./page2.json').then((response)=>{
+            $.get('./songs.json').then((response)=>{
+                let items = response
+                items.forEach((i) => {
+                    let $li = $(`
+                <li>
+                 <a href="./song.html?id=${i.id}">
+                 <h3>${i.name}</h3>
+               <div class="main">
+                    <svg class="sq">
+                        <use xlink:href="#icon-sq"></use>
+                     </svg>
+                     <p class="album">${i.album}</p>
+                     <svg class="playsvg">
+                        <use xlink:href="#icon-play-circled"></use>
+                     </svg>
+                     <p class="ranking">${'0'+i.id}</p>
+                     <div class="underline"></div>
+                 </div>
+                    </a>
+                    </li>
+                           `)
+                    $('#hotMusic').append($li)
+                })
+                $('#hotMusicloading').remove()//当所有歌曲元素加载完毕，去除loading gif
+
                 /*$li.text(response.content)  */                     //页面内容填充
                 $li.attr('data-downloaded','yes')
+            }, function () {
+                //如果获取失败，就.....
+
+
             })
         }else if(index === 2){
             $.get('./page3.json').then((response)=>{
