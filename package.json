@@ -1,0 +1,22 @@
+{
+  "name": "neteasemusic",
+  "version": "1.0.0",
+  "main": "song.js",
+  "scripts": {
+    "start": "cd build; static",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss *.css -d build/ && cp *.html build/ && cp -rf img build/ && cp *.js build/ && cp *.json build/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "cssnano": "^3.10.0",
+    "node-static": "^0.7.9",
+    "postcss": "^6.0.5",
+    "postcss-cli": "^4.1.0",
+    "uglify-es": "^3.0.23",
+    "uglify-js": "^3.0.23"
+  },
+  "dependencies": {}
+}
