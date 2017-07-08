@@ -45,7 +45,7 @@
 .disc-container .icon-play{position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
 .disc-container .icon-pause{position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
 .disc-container .icon {width: 10vw; fill: white;}
-.disc-container .pointer{width: 24vw; position: absolute; left: 45vw;top:-0.6vw; -webkit-transform-origin:left 0; transform-origin:left 0; }
+.disc-container .pointer{z-index:1;width: 24vw; position: absolute; left: 45vw;top:-0.6vw; -webkit-transform-origin:left 0; transform-origin:left 0; }
 /*.disc-container .disc{display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-top: 18vw; }*/
 .disc-container .disc{ margin-top: 18vw;height:78vw; position: relative;}
 .disc-container .ring{width: 78vw; left:50%;top:50%;transform:translate(-50%,-50%);position: absolute;}
