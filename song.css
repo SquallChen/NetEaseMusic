@@ -31,21 +31,32 @@
 }
 
 .disc-container{position: relative; }
-.disc-container .icon-wrapper{position: absolute; z-index: 1; display: -webkit-box; display: -ms-flexbox; display: flex; 
+/*.disc-container .icon-wrapper{position: absolute; z-index: 1; display: -webkit-box; display: -ms-flexbox; display: flex; 
 	-webkit-box-pack: center; 
 	    -ms-flex-pack: center; 
 	        justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center;
 	border: 1px solid white; height: 20vw; width: 20vw;
 	border-radius: 50%; background: rgba(0,0,0,0.5);
+}*/
+.disc-container .icon-wrapper{position: absolute; z-index: 1; left:50%;top:50%;transform:translate(-50%,-50%); 
+	border: 1px solid white; height: 20vw; width: 20vw;
+	border-radius: 50%; background: rgba(0,0,0,0.5);
 }
+.disc-container .icon-play{position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
+.disc-container .icon-pause{position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
 .disc-container .icon {width: 10vw; fill: white;}
 .disc-container .pointer{width: 24vw; position: absolute; left: 45vw;top:-0.6vw; -webkit-transform-origin:left 0; transform-origin:left 0; }
-.disc-container .disc{display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-top: 18vw; }
-.disc-container .ring{width: 78vw; }
-.disc-container .light{width: 78vw; position: absolute; }
+/*.disc-container .disc{display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-top: 18vw; }*/
+.disc-container .disc{ margin-top: 18vw;height:78vw; position: relative;}
+.disc-container .ring{width: 78vw; left:50%;top:50%;transform:translate(-50%,-50%);position: absolute;}
+/*.disc-container .light{width: 78vw; position: absolute; }
 .disc-container .cover{width: 49vw; position: absolute; border-radius: 50%; -webkit-animation: circle 20s infinite linear; animation: circle 20s infinite linear;
                         -webkit-animation-play-state: paused;
-                                animation-play-state: paused;  }
+                                animation-play-state: paused;  }*/
+.disc-container .light{width: 78vw; position: absolute;left:50%;top:50%;transform:translate(-50%,-50%); }
+.disc-container .cover{width: 49vw; position: absolute; border-radius: 50%; -webkit-animation: circle 20s infinite linear; animation: circle 20s infinite linear;
+                        -webkit-animation-play-state: paused;
+                                animation-play-state: paused;left:25.5vw;top:14.75vw;}
 .disc-container.playing .light,
 .disc-container.playing .cover{-webkit-animation-play-state: running;animation-play-state: running; }
 .disc-container .icon-pause{display: none; }
